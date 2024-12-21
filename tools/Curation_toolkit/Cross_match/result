@@ -1,0 +1,332 @@
+./cross_match -matrix RepeatMasker-master/Matrices/crossmatch/25p41g.matrix /home/simon/invase_species/100Drosophilas_final_RM2/curated_library/complete_seqs_curation/Dmel/final_files/Dmel_707070_models_kept.fa fastalib_Repbase_JS.fasta 
+cross_match version 1.090518
+
+Run date:time  231205:104158
+Query file(s):  /home/simon/invase_species/100Drosophilas_final_RM2/curated_library/complete_seqs_curation/Dmel/final_files/Dmel_707070_models_kept.fa   Log file: /home/simon/invase_species/100Drosophilas_final_RM2/curated_library/complete_seqs_curation/Dmel/final_files/Dmel_707070_models_kept.fa.log
+Subject file(s):   fastalib_Repbase_JS.fasta
+Presumed sequence type (from score matrix): DNA
+
+Pairwise comparison algorithm: banded Smith-Waterman
+
+Score matrix RepeatMasker-master/Matrices/crossmatch/25p41g.matrix
+    A   R   G   C   Y   T   K   M   S   W   N   X
+A   8   1  -6 -13 -14 -15 -11  -2 -10  -3  -1 -27
+R   2   2   1 -13 -13 -14  -6  -5  -5  -5  -1 -27
+G  -2   3  10 -13 -13 -13  -1  -8  -1  -8  -1 -27
+C -13 -13 -13  10   3  -2  -8  -1  -1  -8  -1 -27
+Y -14 -13 -13   1   2   2  -5  -6  -5  -5  -1 -27
+T -15 -14 -13  -6   1   8  -2 -11 -10  -3  -1 -27
+K  -9  -5  -1  -9  -6  -2  -1  -9  -5  -5  -1 -27
+M  -2  -6  -9  -1  -5  -9  -9  -1  -5  -5  -1 -27
+S  -8  -4  -1  -1  -4  -8  -4  -4  -1  -8  -1 -27
+W  -3  -6 -10 -10  -6  -3  -6  -6 -10  -3  -1 -27
+N  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 -27
+X -27 -27 -27 -27 -27 -27 -27 -27 -27 -27 -27 -27
+
+Gap penalties: gap_init: -12, gap_ext: -2, ins_gap_ext: -2, del_gap_ext: -2, 
+Using complexity-adjusted scores. Assumed background frequencies:
+ Aa: 0.295  Rr: 0.000  Gg: 0.205  Cc: 0.205  Yy: 0.000  Tt: 0.295  Kk: 0.000  Mm: 0.000  Ss: 0.000  Ww: 0.000  Nn: 0.000  : 0.000  
+
+minmatch: 14, maxmatch: 20, max_group_size: 0 (turned off), minscore: 30, near_minscore: 30, bandwidth: 14, indexwordsize: 12, indexwordsize2: 4, word_offset: 2
+word_raw: 0
+vector_bound: 0
+gap1_minscore: 17, gap1_dropoff: -12
+masklevel: 80
+minmargin: 0.5
+splice_edge_length: 0, allocation: 1 bytes
+min_intron_length: 30, max_intron_length: 10000, max_overlap: 20, min_exon_length: 6 
+Variable sizes: int: 4, long int: 8, SEQ_AREA: 4, signed: 1
+
+
+Sequence file: /home/simon/invase_species/100Drosophilas_final_RM2/curated_library/complete_seqs_curation/Dmel/final_files/Dmel_707070_models_kept.fa    2 entries
+Residue counts,  score matrix column # (* = last column):
+  a        2238    1
+  c        1013    4
+  g         902    3
+  t        1518    6
+Total   5671 residues
+
+4 distinct alphabetic chars have freq > 1% -- 
+
+Allocated space: 11347 seqs, 67 ids, 3 descrips
+
+NO QUALITY FILE /home/simon/invase_species/100Drosophilas_final_RM2/curated_library/complete_seqs_curation/Dmel/final_files/Dmel_707070_models_kept.fa.qual WAS FOUND. REMAINING INPUT QUALITIES SET TO 15.
+Base_llr -5.55, intron_coeff: -0.00288828
+
+Total subject length: 132772601 residues, final minscore: 30
+
+Num. pairs: 35
+Maximal single base matches (low complexity regions):
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   98   Residues:   695 -   747
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   52   Residues:   391 -   399
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   43   Residues:    90 -   102
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   36   Residues:     1 -    11
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   30   Residues:    66 -    70
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   41   Residues:   346 -   353
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   32   Residues:   107 -   110
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   47   Residues:   612 -   622
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   42   Residues:   427 -   435
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   40   Residues:   481 -   485
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   70   Residues:   810 -   844
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   68   Residues:   760 -   774
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   46   Residues:   787 -   793
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   57   Residues:   860 -   869
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   56   Residues:  1075 -  1081
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   52   Residues:  1010 -  1028
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   45   Residues:   918 -   929
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   41   Residues:   953 -   960
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   33   Residues:   974 -   981
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   33   Residues:  1038 -  1045
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   39   Residues:  1101 -  1109
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   39   Residues:  1498 -  1507
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   33   Residues:  1117 -  1123
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   33   Residues:  1153 -  1159
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   32   Residues:  1196 -  1199
+Dmel_ltr-1_family-142#CLASSI/LTR   Aa   Score:   32   Residues:  1310 -  1313
+Dmel_ltr-1_family-142#CLASSI/LTR   Gg   Score:   38   Residues:   637 -   643
+Dmel_ltr-1_family-142#CLASSI/LTR   Gg   Score:   30   Residues:    91 -    93
+Dmel_ltr-1_family-142#CLASSI/LTR   Gg   Score:   30   Residues:   302 -   304
+Dmel_ltr-1_family-142#CLASSI/LTR   Gg   Score:   30   Residues:   416 -   418
+Dmel_ltr-1_family-142#CLASSI/LTR   Gg   Score:   30   Residues:   903 -   905
+Dmel_ltr-1_family-142#CLASSI/LTR   Cc   Score:   44   Residues:   907 -   912
+Dmel_ltr-1_family-142#CLASSI/LTR   Cc   Score:   40   Residues:   486 -   489
+Dmel_ltr-1_family-142#CLASSI/LTR   Cc   Score:   32   Residues:    21 -    28
+Dmel_ltr-1_family-142#CLASSI/LTR   Cc   Score:   31   Residues:   138 -   144
+Dmel_ltr-1_family-142#CLASSI/LTR   Cc   Score:   30   Residues:    47 -    49
+Dmel_ltr-1_family-142#CLASSI/LTR   Cc   Score:   31   Residues:   209 -   215
+Dmel_ltr-1_family-142#CLASSI/LTR   Cc   Score:   30   Residues:   151 -   153
+Dmel_ltr-1_family-142#CLASSI/LTR   Cc   Score:   31   Residues:   220 -   226
+Dmel_ltr-1_family-142#CLASSI/LTR   Cc   Score:   30   Residues:   478 -   480
+Dmel_ltr-1_family-142#CLASSI/LTR   Cc   Score:   30   Residues:   527 -   529
+Dmel_ltr-1_family-142#CLASSI/LTR   Cc   Score:   30   Residues:   597 -   599
+Dmel_ltr-1_family-142#CLASSI/LTR   Cc   Score:   30   Residues:   898 -   900
+Dmel_ltr-1_family-142#CLASSI/LTR   Cc   Score:   34   Residues:  1323 -  1327
+Dmel_ltr-1_family-142#CLASSI/LTR   Tt   Score:   51   Residues:  1316 -  1336
+Dmel_ltr-1_family-142#CLASSI/LTR   Tt   Score:   48   Residues:  1124 -  1129
+Dmel_ltr-1_family-142#CLASSI/LTR   Tt   Score:   38   Residues:   497 -   502
+Dmel_ltr-1_family-142#CLASSI/LTR   Tt   Score:   36   Residues:    13 -    27
+Dmel_ltr-1_family-142#CLASSI/LTR   Tt   Score:   32   Residues:   378 -   381
+Dmel_ltr-1_family-142#CLASSI/LTR   Tt   Score:   30   Residues:   329 -   333
+Dmel_ltr-1_family-142#CLASSI/LTR   Tt   Score:   38   Residues:   987 -   992
+Dmel_ltr-1_family-142#CLASSI/LTR   Tt   Score:   32   Residues:   941 -   944
+Dmel_ltr-1_family-142#CLASSI/LTR   Tt   Score:   36   Residues:  1000 -  1006
+Dmel_ltr-1_family-142#CLASSI/LTR   Tt   Score:   32   Residues:  1083 -  1086
+Dmel_ltr-1_family-142#CLASSI/LTR   Tt   Score:   32   Residues:  1144 -  1147
+Dmel_ltr-1_family-142#CLASSI/LTR   Tt   Score:   32   Residues:  1200 -  1203
+Dmel_ltr-1_family-142#CLASSI/LTR   Tt   Score:   32   Residues:  1241 -  1244
+Dmel_ltr-1_family-142#CLASSI/LTR   Tt   Score:   42   Residues:  1445 -  1453
+Dmel_ltr-1_family-142#CLASSI/LTR   Tt   Score:   38   Residues:  1426 -  1431
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   96   Residues:   846 -   869
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   81   Residues:   500 -   512
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   54   Residues:   336 -   343
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   40   Residues:   248 -   252
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   35   Residues:    85 -    91
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:   169 -   179
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   30   Residues:   326 -   330
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   44   Residues:   408 -   415
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:   474 -   477
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   31   Residues:   440 -   447
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   54   Residues:   802 -   820
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   42   Residues:   657 -   667
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   33   Residues:   585 -   591
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:   576 -   579
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   33   Residues:   600 -   606
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:   616 -   619
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   30   Residues:   756 -   760
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   71   Residues:  2016 -  2044
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   67   Residues:  1833 -  1851
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   57   Residues:  1760 -  1778
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   49   Residues:  1086 -  1094
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   42   Residues:  1050 -  1058
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   37   Residues:   878 -   892
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   36   Residues:   985 -  1001
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   34   Residues:   925 -   939
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   34   Residues:   973 -   980
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   34   Residues:  1009 -  1016
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:  1021 -  1032
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   41   Residues:  1510 -  1523
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   40   Residues:  1118 -  1122
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   31   Residues:  1107 -  1114
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   35   Residues:  1184 -  1190
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:  1157 -  1160
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   35   Residues:  1358 -  1368
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:  1217 -  1220
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:  1224 -  1227
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   30   Residues:  1348 -  1352
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   33   Residues:  1384 -  1391
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:  1434 -  1437
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   38   Residues:  1685 -  1690
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   33   Residues:  1586 -  1592
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:  1541 -  1544
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   41   Residues:  1792 -  1799
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   31   Residues:  1814 -  1822
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   30   Residues:  1904 -  1908
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   71   Residues:  2795 -  2812
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   57   Residues:  2509 -  2527
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   56   Residues:  2425 -  2446
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   42   Residues:  2081 -  2098
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   40   Residues:  2223 -  2227
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   39   Residues:  2107 -  2116
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:  2209 -  2212
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   40   Residues:  2332 -  2336
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   37   Residues:  2302 -  2311
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   48   Residues:  2572 -  2577
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:  2534 -  2537
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   44   Residues:  2746 -  2753
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   38   Residues:  2615 -  2620
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   33   Residues:  2589 -  2602
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:  2650 -  2653
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   42   Residues:  2775 -  2783
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   70   Residues:  3197 -  3206
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   48   Residues:  2894 -  2899
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   40   Residues:  2834 -  2838
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   40   Residues:  3098 -  3102
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   33   Residues:  3011 -  3017
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:  2913 -  2916
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:  2924 -  2927
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:  3036 -  3039
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   55   Residues:  3487 -  3506
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   47   Residues:  3234 -  3243
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   43   Residues:  3324 -  3335
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   41   Residues:  3249 -  3256
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   41   Residues:  3286 -  3293
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   37   Residues:  3263 -  3279
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   39   Residues:  3427 -  3436
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   48   Residues:  3668 -  3673
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   40   Residues:  3652 -  3656
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   33   Residues:  3528 -  3535
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:  3516 -  3519
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:  3600 -  3603
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   46   Residues:  3900 -  3906
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   40   Residues:  3687 -  3699
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   32   Residues:  3889 -  3892
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   31   Residues:  3752 -  3760
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   31   Residues:  3775 -  3783
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   40   Residues:  4086 -  4090
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   38   Residues:  3980 -  3985
+Dmel_rnd-1_family-129#CLASSI/LTR   Aa   Score:   33   Residues:  3967 -  3974
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   47   Residues:   562 -   568
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   44   Residues:   400 -   405
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   38   Residues:    19 -    28
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   47   Residues:  1269 -  1275
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   34   Residues:  1243 -  1247
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   30   Residues:   883 -   893
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   40   Residues:  2678 -  2681
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   36   Residues:  1508 -  1517
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   30   Residues:  1369 -  1371
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   34   Residues:  1597 -  1601
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   34   Residues:  2454 -  2458
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   30   Residues:  1732 -  1734
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   30   Residues:  2120 -  2122
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   30   Residues:  2392 -  2394
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   30   Residues:  2402 -  2404
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   30   Residues:  2505 -  2507
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   30   Residues:  2578 -  2580
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   34   Residues:  2705 -  2709
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   34   Residues:  2855 -  2859
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   30   Residues:  2797 -  2799
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   30   Residues:  3028 -  3030
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   30   Residues:  3091 -  3093
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   30   Residues:  3350 -  3352
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   30   Residues:  3508 -  3510
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   30   Residues:  3592 -  3594
+Dmel_rnd-1_family-129#CLASSI/LTR   Gg   Score:   30   Residues:  3724 -  3726
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   67   Residues:   904 -   912
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   38   Residues:    69 -    75
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   30   Residues:    54 -    56
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   30   Residues:   163 -   165
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   30   Residues:   180 -   182
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   30   Residues:   554 -   556
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   60   Residues:  2378 -  2383
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   40   Residues:   940 -   943
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   40   Residues:  1017 -  1020
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   30   Residues:   965 -   967
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   37   Residues:  1925 -  1930
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   34   Residues:  1059 -  1063
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   30   Residues:  1259 -  1261
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   34   Residues:  2166 -  2173
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   30   Residues:  2280 -  2282
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   30   Residues:  2324 -  2326
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   30   Residues:  2337 -  2339
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   40   Residues:  3512 -  3515
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   30   Residues:  2477 -  2479
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   30   Residues:  3456 -  3458
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   40   Residues:  3737 -  3740
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   30   Residues:  3555 -  3557
+Dmel_rnd-1_family-129#CLASSI/LTR   Cc   Score:   31   Residues:  4047 -  4053
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   89   Residues:   116 -   147
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   57   Residues:   513 -   522
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   32   Residues:   311 -   314
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   30   Residues:   346 -   350
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   55   Residues:  1873 -  1883
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   41   Residues:  1176 -  1183
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   40   Residues:   647 -   651
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   41   Residues:  1669 -  1676
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   38   Residues:  1653 -  1658
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   32   Residues:  1212 -  1215
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   32   Residues:  1561 -  1564
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   30   Residues:  1262 -  1266
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   32   Residues:  1635 -  1638
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   32   Residues:  1754 -  1757
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   48   Residues:  1912 -  1922
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   48   Residues:  2462 -  2467
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   32   Residues:  2285 -  2288
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   44   Residues:  3302 -  3309
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   41   Residues:  2689 -  2696
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   40   Residues:  3135 -  3139
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   32   Residues:  2821 -  2824
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   32   Residues:  2962 -  2965
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   30   Residues:  2842 -  2850
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   30   Residues:  2868 -  2872
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   32   Residues:  3188 -  3191
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   44   Residues:  3815 -  3822
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   40   Residues:  3706 -  3710
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   36   Residues:  3678 -  3684
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   35   Residues:  3396 -  3402
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   30   Residues:  3372 -  3376
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   32   Residues:  3644 -  3647
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   30   Residues:  3606 -  3610
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   39   Residues:  3934 -  3954
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   38   Residues:  3913 -  3918
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   36   Residues:  3893 -  3899
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   32   Residues:  3869 -  3872
+Dmel_rnd-1_family-129#CLASSI/LTR   Tt   Score:   38   Residues:  4038 -  4043
+
+1700 13.83 24.06 25.23  Dmel_ltr-1_family-142#CLASSI/LTR        1  1193 (379)    Copia-62_BG-I#LTR/Copia     1856  3034 (9)  
+2337 11.60 25.08 23.90  Dmel_ltr-1_family-142#CLASSI/LTR      283  1558 (14)    Gypsy-10_DMoj-LTR#LTR/Gypsy        2  1292 (1734)  
+  34 18.75 37.50 6.25  Dmel_ltr-1_family-142#CLASSI/LTR     1548  1563 (9)  C Penelope-1_SSa#LINE/Penelope   (1737)   375   355  
+  47  9.09 54.55 0.00  Dmel_ltr-1_family-142#CLASSI/LTR     1562  1572 (0)    Copia-26_AIp-I#LTR/Copia     2243  2259 (1843)  
+
+  49  9.09 54.55 0.00  Dmel_rnd-1_family-129#CLASSI/LTR        2    12 (4087)    L1-35_NN#LINE/L1     1381  1397 (5518)  
+4150 13.54 26.16 26.25  Dmel_rnd-1_family-129#CLASSI/LTR       11  3141 (958)    Gypsy-25_CGi-I#LTR/Gypsy      966  4093 (12)  
+12189  8.37 17.06 15.99  Dmel_rnd-1_family-129#CLASSI/LTR      916  4092 (7)    Gypsy-1_DSim-I#LTR/Gypsy       12  3222 (3800)  
+
+2 matching entries (first file).
+
+Discrepancy summary:
+Qual algn  cum    rcum    (%)    unalgn X    N  sub del ins  total (%)   cum  rcum (%)
+
+
+Score histogram: displayed unspliced matches/cum/frac, other unspliced, displayed spliced, other spliced:
+> 1000    4     4 0.571      0     0 0.000      0     0 0.000      0     0 0.000  
+   49    1     5 0.714      0     0 0.000      0     0 0.000      0     0 0.000  
+   47    1     6 0.857      0     0 0.000      0     0 0.000      0     0 0.000  
+   34    1     7 1.000      0     0 0.000      0     0 0.000      0     0 0.000  
+
+Start histogram: displayed unspliced matches/cum/frac, other unspliced, displayed spliced, other spliced:
+> 1000    2     2 0.286      0     0 0.000      0     0 0.000      0     0 0.000  
+  915    1     3 0.429      0     0 0.000      0     0 0.000      0     0 0.000  
+  282    1     4 0.571      0     0 0.000      0     0 0.000      0     0 0.000  
+   10    1     5 0.714      0     0 0.000      0     0 0.000      0     0 0.000  
+    1    1     6 0.857      0     0 0.000      0     0 0.000      0     0 0.000  
+    0    1     7 1.000      0     0 0.000      0     0 0.000      0     0 0.000  
+
+
+Splice histogram : displayed 5' splice, other 5' splice: displayed 3' splice, other 3' splice:
+
+
+Times in secs (cum)
+read queries   0 (  0)
+sort queries   0 (  0)
+find matches   5 (  5)
+         end   0 (  5)

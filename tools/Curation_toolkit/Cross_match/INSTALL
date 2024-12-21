@@ -1,0 +1,137 @@
+I am sending the current version (1.090518) of the
+phrap/cross_match/swat package in a separate email message. It will
+have the subject line "phrap/cross_match/swat (PROGRAM SOURCE CODE)",
+and will contain the phrap package (in uuencoded form) in the body of
+the message -- the first few lines will look like this:
+
+> begin 664 distrib.tar.gz
+> M'XL("#-))4H``V1I<W1R:6(N=&%R`.P\_7/;-K+YM?PKD*;S++FR8CFVT[.N
+> MF5-LQ?'5L7.6<WV=S@V/(B$)#44J!&G'Z?1_?_L!@*`L.TZ:]M[-6--:(`CL
+
+"(in some cases your mail program may convert this to an attachment
+instead).  The email should arrive today -- if you don't receive it,
+it probably has been caught by your spam filter so please check that
+first. (If it is not in your own spam filter, it may have been
+rejected by your institution's email server, in which case you should
+be prepared to provide me with another email account, for example
+gmail, if necessary). Installation instructions are below. If you
+encounter problems, please be sure you have carefully read and
+followed these instructions before contacting me. The contacts for
+phred and consed are Brent Ewing and David Gordon, at the email
+addresses indicated in the license; I do not distribute or support
+these programs myself.
+
+N.B.  THE INSTALLATION INSTRUCTIONS ARE SLIGHTLY DIFFERENT FROM THOSE
+FOR THE PREVIOUS VERSION (0.990329). In particular (i) there are no
+longer separate 'manyreads' or 'longreads' versions, because the basic
+program already includes the capability for dealing with very long
+and/or large numbers of sequences; (ii) the uuencoded file is now
+gzipped (rather than compressed with Unix compress).
+
+
+INSTALLATION INSTRUCTIONS:
+
+The source code for the swat/cross_match/phrap package is being sent
+to you in the form of an email message containing a uuencoded .tar.gZ
+file; you may need to have access to a Unix or linux system for the initial
+unpacking, but once you've uudecoded it and unpacked the .tar file
+(steps i and ii below), you should be able to compile the programs on
+computers running other operating systems -- they should be portable
+to almost anything with a decent C compiler and adequate memory (512
+Mb RAM or more is desirable). Here are the steps needed to unpack and
+install the programs:
+
+i. If the email has an attachment called 'distrib.tar.gz', save this
+attachment as a file on your computer and proceed to step ii
+below. Otherwise, save the entire email message as a file (for
+example, "temp.mail"). If possible, do this using the Unix mail
+command, rather than another mail program -- some mail programs
+(e.g. Pine) remove trailing spaces on each line of incoming messages,
+which will corrupt a uuencoded message. If you cannot use Unix mail,
+try to avoid opening the message before you save it.
+    Do not attempt to modify the saved mail message in any way --
+modifications are unnecessary and may corrupt the message.  To unpack
+the saved email message, execute the following command on a Unix
+workstation, in the directory containing the file temp.mail:
+
+> uudecode temp.mail
+
+This should create a file called 'distrib.tar.gz'.
+
+ii. Now execute the following command (on a Unix workstation, in the
+same directory as the file you created in step i):
+
+> zcat distrib.tar.gz | tar xvf -
+
+If either of the commands in steps i or ii results in a 'command not found' error
+message (or something similar), then there is some problem with your
+Unix installation and you will need to use a different computer or
+consult a local expert about your system. Any other error message
+likely means that the email message was corrupted by your mail program
+(see step i above).
+
+iii. To produce working versions of the programs, move (if necessary)
+all of the files produced by the above command to the computer on
+which you wish to run the programs (which must have a C compiler!),
+and execute the following command in the directory that contains the
+files:
+
+> make
+
+If your compiler does not recognize the -O2 optimization flag (which
+should be evident from warning messages it produces), you should change
+the line
+
+       CFLAGS= -O2
+
+in the file "makefile" to
+
+       CFLAGS= -O
+
+Then remove all files ending in .o produced by the original make, and
+recompile.
+
+Other warning messages (as opposed to error messages!) that may be
+produced by the compiler can in general be ignored.
+
+IMPORTANT NOTE TO MAC USERS: On some Mac systems, compilation may fail, with several errors
+of the form "error: non-void function *** should return a value"
+  The problem here is with the MaxOSX C compiler (a particular version of gcc),
+which does not properly handle old-style (Kernigan-Ritchie) C, which
+is what phrap is written in -- what the compiler is reporting as
+errors are in fact not errors in K & R C. This problem has been fixed in more
+recent versions of gcc (version 4.6 or higher). You will need to (i)
+download and install a more recent gcc version, and (ii) change the
+line CC= line in the makefile from
+
+CC= cc
+
+to
+
+CC= gcc
+
+and recompile. I apologize (on Apple's behalf!) for the inconvenience.
+
+
+(N.B. TO USERS OF PREVIOUS VERSIONS: There are no longer separate
+.manyreads OR .longreads variants of the programs -- the default
+versions of cross_match and phrap automatically handle large numbers
+of reads, and long sequences).
+
+iv. If you are operating a non-commercial (academic or government)
+computer facility which provides access to several independent
+investigators, you are required by the licensing agreement to set the
+permissions on the executables and source code to allow execute but
+not read access, so that the programs may not be copied.
+
+v. The documentation is in three .doc files: general.doc, phrap.doc,
+and swat.doc. Please read it!
+
+Contact me if you have problems with any of the above steps. Before
+doing so however please record exactly what steps you carried out, on
+what computer & operating system, and what error messages you
+received.
+
+N.B. PLEASE SEND MAIL TO ME ONLY AT phg@u.washington.edu
+--- OTHER ADDRESSES MAY BE UNRELIABLE.
+

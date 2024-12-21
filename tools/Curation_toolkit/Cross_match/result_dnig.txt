@@ -1,0 +1,378 @@
+./cross_match -matrix RepeatMasker-master/Matrices/crossmatch/25p41g.matrix Dnig_complete_7070_all.fa fastalib_Repbase_JS.fasta 
+cross_match version 1.090518
+
+Run date:time  231207:152606
+Query file(s):  Dnig_complete_7070_all.fa   Log file: Dnig_complete_7070_all.fa.log
+Subject file(s):   fastalib_Repbase_JS.fasta
+Presumed sequence type (from score matrix): DNA
+
+Pairwise comparison algorithm: banded Smith-Waterman
+
+Score matrix RepeatMasker-master/Matrices/crossmatch/25p41g.matrix
+    A   R   G   C   Y   T   K   M   S   W   N   X
+A   8   1  -6 -13 -14 -15 -11  -2 -10  -3  -1 -27
+R   2   2   1 -13 -13 -14  -6  -5  -5  -5  -1 -27
+G  -2   3  10 -13 -13 -13  -1  -8  -1  -8  -1 -27
+C -13 -13 -13  10   3  -2  -8  -1  -1  -8  -1 -27
+Y -14 -13 -13   1   2   2  -5  -6  -5  -5  -1 -27
+T -15 -14 -13  -6   1   8  -2 -11 -10  -3  -1 -27
+K  -9  -5  -1  -9  -6  -2  -1  -9  -5  -5  -1 -27
+M  -2  -6  -9  -1  -5  -9  -9  -1  -5  -5  -1 -27
+S  -8  -4  -1  -1  -4  -8  -4  -4  -1  -8  -1 -27
+W  -3  -6 -10 -10  -6  -3  -6  -6 -10  -3  -1 -27
+N  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 -27
+X -27 -27 -27 -27 -27 -27 -27 -27 -27 -27 -27 -27
+
+Gap penalties: gap_init: -12, gap_ext: -2, ins_gap_ext: -2, del_gap_ext: -2, 
+Using complexity-adjusted scores. Assumed background frequencies:
+ Aa: 0.295  Rr: 0.000  Gg: 0.205  Cc: 0.205  Yy: 0.000  Tt: 0.295  Kk: 0.000  Mm: 0.000  Ss: 0.000  Ww: 0.000  Nn: 0.000  : 0.000  
+
+minmatch: 14, maxmatch: 20, max_group_size: 0 (turned off), minscore: 30, near_minscore: 30, bandwidth: 14, indexwordsize: 12, indexwordsize2: 4, word_offset: 2
+word_raw: 0
+vector_bound: 0
+gap1_minscore: 17, gap1_dropoff: -12
+masklevel: 80
+minmargin: 0.5
+splice_edge_length: 0, allocation: 1 bytes
+min_intron_length: 30, max_intron_length: 10000, max_overlap: 20, min_exon_length: 6 
+Variable sizes: int: 4, long int: 8, SEQ_AREA: 4, signed: 1
+
+
+Sequence file: Dnig_complete_7070_all.fa    1 entries
+Residue counts,  score matrix column # (* = last column):
+  a        2395    1
+  c        1839    4
+  g        1739    3
+  t        1788    6
+Total   7761 residues
+
+4 distinct alphabetic chars have freq > 1% -- 
+
+Allocated space: 15525 seqs, 38 ids, 2 descrips
+
+NO QUALITY FILE Dnig_complete_7070_all.fa.qual WAS FOUND. REMAINING INPUT QUALITIES SET TO 15.
+Base_llr -5.55, intron_coeff: -0.00288828
+
+Total subject length: 132772601 residues, final minscore: 30
+
+Num. pairs: 41
+Maximal single base matches (low complexity regions):
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:  116   Residues:   550 -   591
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   64   Residues:   450 -   457
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:    71 -    75
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:   151 -   155
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:   366 -   374
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   64   Residues:   486 -   501
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   35   Residues:   513 -   519
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:   537 -   540
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   91   Residues:  1921 -  1963
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   57   Residues:  1835 -  1859
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   56   Residues:  1687 -  1708
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   48   Residues:   878 -   883
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   40   Residues:   759 -   763
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   40   Residues:  1163 -  1167
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:   888 -   891
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:   934 -   937
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  1007 -  1010
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  1145 -  1148
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  1288 -  1291
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  1489 -  1492
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  1558 -  1561
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  1646 -  1649
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  1781 -  1784
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   68   Residues:  2977 -  3008
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   62   Residues:  2626 -  2634
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   38   Residues:  2393 -  2398
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  2066 -  2069
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  2213 -  2216
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  2187 -  2195
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  2384 -  2387
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  2258 -  2262
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   38   Residues:  2543 -  2548
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  2446 -  2450
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   54   Residues:  2871 -  2883
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  2699 -  2702
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  2927 -  2930
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  2936 -  2939
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  2957 -  2965
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   58   Residues:  3146 -  3164
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   40   Residues:  3023 -  3027
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   36   Residues:  3074 -  3083
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  3089 -  3093
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   56   Residues:  4595 -  4606
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   52   Residues:  3686 -  3694
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   51   Residues:  3654 -  3666
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   40   Residues:  3360 -  3364
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   40   Residues:  3593 -  3597
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   38   Residues:  3579 -  3584
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  3457 -  3460
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  3465 -  3468
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   48   Residues:  4199 -  4204
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   44   Residues:  4136 -  4143
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   41   Residues:  4065 -  4073
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   40   Residues:  3701 -  3705
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   40   Residues:  4004 -  4008
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   39   Residues:  3932 -  3941
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   35   Residues:  3717 -  3723
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  3796 -  3799
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  3864 -  3868
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  3891 -  3895
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   48   Residues:  4433 -  4438
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   36   Residues:  4398 -  4404
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   33   Residues:  4247 -  4254
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  4381 -  4384
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  4343 -  4347
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   40   Residues:  4445 -  4449
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   35   Residues:  4459 -  4469
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   51   Residues:  6204 -  6212
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   48   Residues:  4832 -  4849
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   36   Residues:  4632 -  4638
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  4678 -  4681
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  4735 -  4738
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  4686 -  4690
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   48   Residues:  5275 -  5280
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   43   Residues:  5250 -  5257
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   34   Residues:  5058 -  5065
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  4898 -  4901
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  4995 -  4998
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  4926 -  4930
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  5092 -  5095
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   48   Residues:  5645 -  5650
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   40   Residues:  5445 -  5449
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  5391 -  5394
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  5321 -  5325
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  5429 -  5432
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   36   Residues:  5530 -  5536
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   31   Residues:  5481 -  5493
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  5499 -  5503
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  5571 -  5574
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  5610 -  5613
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   31   Residues:  5621 -  5629
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   48   Residues:  5909 -  5914
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   38   Residues:  5724 -  5729
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  6098 -  6110
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  5999 -  6003
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  6190 -  6193
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   44   Residues:  6808 -  6815
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   36   Residues:  6298 -  6304
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   35   Residues:  6275 -  6281
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  6254 -  6258
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   33   Residues:  6468 -  6474
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   32   Residues:  6480 -  6483
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  6734 -  6738
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  7309 -  7313
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  7637 -  7641
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Aa   Score:   30   Residues:  7750 -  7754
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   71   Residues:  6344 -  6354
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   64   Residues:  3280 -  3287
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   58   Residues:  2157 -  2165
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   40   Residues:   927 -   930
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:   602 -   604
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:   618 -   620
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:   842 -   844
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:   897 -   899
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:   912 -   914
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   34   Residues:  1512 -  1516
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  1053 -  1055
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  1088 -  1090
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  1273 -  1275
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  1334 -  1336
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  1369 -  1371
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  1441 -  1443
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  1477 -  1479
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  1486 -  1488
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   34   Residues:  2003 -  2007
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  1770 -  1772
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   34   Residues:  2134 -  2141
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   40   Residues:  2454 -  2457
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   40   Residues:  2687 -  2690
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  2575 -  2577
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   40   Residues:  2864 -  2867
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   34   Residues:  2814 -  2818
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   40   Residues:  2958 -  2961
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  2880 -  2882
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  3105 -  3107
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   60   Residues:  4161 -  4166
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   34   Residues:  3611 -  3615
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  3321 -  3323
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  3350 -  3352
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  3528 -  3530
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  3537 -  3539
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  3724 -  3726
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  3925 -  3927
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  3956 -  3958
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  4061 -  4063
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   50   Residues:  6028 -  6032
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   44   Residues:  5482 -  5487
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   41   Residues:  4367 -  4374
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   34   Residues:  4209 -  4213
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   31   Residues:  4308 -  4314
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  4336 -  4338
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   40   Residues:  4599 -  4602
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  4523 -  4525
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   40   Residues:  4779 -  4782
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   40   Residues:  5031 -  5034
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  4888 -  4890
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   34   Residues:  5309 -  5313
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   32   Residues:  5228 -  5235
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  5130 -  5132
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  5521 -  5523
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   40   Residues:  6323 -  6326
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   38   Residues:  6171 -  6177
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   36   Residues:  6231 -  6243
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  6223 -  6225
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  6272 -  6274
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   62   Residues:  7343 -  7353
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   34   Residues:  6563 -  6567
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   34   Residues:  7022 -  7026
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  6644 -  6646
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  7246 -  7248
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   30   Residues:  7337 -  7339
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   40   Residues:  7629 -  7632
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Gg   Score:   34   Residues:  7700 -  7707
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   74   Residues:  2764 -  2783
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   54   Residues:   785 -   794
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   50   Residues:   634 -   638
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:   170 -   172
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:   442 -   444
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   34   Residues:   656 -   663
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:   649 -   651
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:   776 -   778
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   54   Residues:  1040 -  1049
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   40   Residues:   919 -   922
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   54   Residues:  1321 -  1330
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   44   Residues:  1193 -  1201
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  1098 -  1100
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  1312 -  1314
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   49   Residues:  2224 -  2235
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   44   Residues:  1464 -  1472
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  2045 -  2047
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   44   Residues:  2297 -  2302
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   34   Residues:  2410 -  2414
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  2370 -  2372
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  2549 -  2551
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   70   Residues:  5811 -  5817
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   50   Residues:  2966 -  2970
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   40   Residues:  2886 -  2889
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  2945 -  2947
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   44   Residues:  4185 -  4190
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   40   Residues:  3029 -  3032
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   40   Residues:  3412 -  3415
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   37   Residues:  3118 -  3123
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  3037 -  3039
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  3289 -  3291
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  3401 -  3403
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   40   Residues:  3827 -  3830
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  3471 -  3473
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  3511 -  3513
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  3821 -  3823
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   40   Residues:  3904 -  3907
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   40   Residues:  4025 -  4028
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   31   Residues:  4009 -  4015
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  3917 -  3919
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   44   Residues:  5281 -  5289
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   31   Residues:  4902 -  4908
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  4375 -  4377
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  4454 -  4456
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  4660 -  4662
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  4805 -  4807
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  4985 -  4987
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  5104 -  5106
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   40   Residues:  5567 -  5570
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   38   Residues:  5416 -  5422
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  5515 -  5517
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  5642 -  5644
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  5663 -  5665
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  5778 -  5780
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   44   Residues:  6288 -  6293
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   40   Residues:  5841 -  5844
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  5902 -  5904
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  5992 -  5994
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  6111 -  6113
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  6196 -  6198
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   35   Residues:  6890 -  6898
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   34   Residues:  6368 -  6372
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  6751 -  6753
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   34   Residues:  7404 -  7411
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  6941 -  6943
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  7015 -  7017
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Cc   Score:   30   Residues:  7114 -  7116
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   69   Residues:  3492 -  3505
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   49   Residues:   938 -   946
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   48   Residues:   687 -   692
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   45   Residues:   472 -   482
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   40   Residues:   244 -   248
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   33   Residues:    36 -    43
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   30   Residues:   333 -   337
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   43   Residues:   505 -   512
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   48   Residues:   902 -   907
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   40   Residues:   771 -   775
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   38   Residues:   740 -   745
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   40   Residues:   814 -   818
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   30   Residues:   825 -   829
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   48   Residues:  1914 -  1919
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   40   Residues:  1223 -  1227
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   38   Residues:  1075 -  1080
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   32   Residues:   988 -   991
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   32   Residues:  1028 -  1031
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   40   Residues:  1358 -  1362
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   32   Residues:  1278 -  1281
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   32   Residues:  1307 -  1310
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   38   Residues:  1429 -  1434
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   32   Residues:  1452 -  1455
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   48   Residues:  3273 -  3278
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   38   Residues:  3165 -  3170
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   32   Residues:  2388 -  2391
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   32   Residues:  2472 -  2475
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   32   Residues:  2500 -  2503
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   32   Residues:  2973 -  2976
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   56   Residues:  6119 -  6125
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   48   Residues:  4392 -  4397
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   40   Residues:  4216 -  4220
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   38   Residues:  3695 -  3700
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   34   Residues:  4176 -  4192
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   32   Residues:  3728 -  3731
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   32   Residues:  3871 -  3874
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   32   Residues:  4048 -  4051
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   38   Residues:  4294 -  4299
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   48   Residues:  5041 -  5046
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   46   Residues:  4911 -  4917
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   36   Residues:  4544 -  4553
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   38   Residues:  5710 -  5715
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   32   Residues:  5450 -  5453
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   54   Residues:  6397 -  6404
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   32   Residues:  6388 -  6391
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   43   Residues:  7715 -  7722
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   32   Residues:  6711 -  6714
+ltr-1_family-21_s_2#CLASSI/LTR/GYPSY   Tt   Score:   30   Residues:  6475 -  6479
+
+  51  0.00 0.00 0.00  ltr-1_family-21_s_2#CLASSI/LTR/GYPSY        1     8 (7753)  C MuDR-3_ALy#DNA/MULE-MuDR   (4844)  6535  6528  
+8642 11.76 28.63 28.58  ltr-1_family-21_s_2#CLASSI/LTR/GYPSY        3  6447 (1314)  C EnSpm-9C_CCri#DNA/CMC-EnSpm?   (13242)  6450     3  
+20124 15.56 15.20 14.93  ltr-1_family-21_s_2#CLASSI/LTR/GYPSY     1637  7746 (15)    Gypsy-3_DVir-I#LTR/Gypsy       29  6155 (135)  
+  87  4.88 31.71 29.27  ltr-1_family-21_s_2#CLASSI/LTR/GYPSY     7721  7761 (0)    L1-38_DR#LINE/L1     2502  2543 (2934)  
+
+1 matching entries (first file).
+
+Discrepancy summary:
+Qual algn  cum    rcum    (%)    unalgn X    N  sub del ins  total (%)   cum  rcum (%)
+
+
+Score histogram: displayed unspliced matches/cum/frac, other unspliced, displayed spliced, other spliced:
+> 1000    2     2 0.500      0     0 0.000      0     0 0.000      0     0 0.000  
+   87    1     3 0.750      0     0 0.000      0     0 0.000      0     0 0.000  
+   51    1     4 1.000      0     0 0.000      0     0 0.000      0     0 0.000  
+
+Start histogram: displayed unspliced matches/cum/frac, other unspliced, displayed spliced, other spliced:
+> 1000    2     2 0.500      0     0 0.000      0     0 0.000      0     0 0.000  
+    2    1     3 0.750      0     0 0.000      0     0 0.000      0     0 0.000  
+    0    1     4 1.000      0     0 0.000      0     0 0.000      0     0 0.000  
+
+
+Splice histogram : displayed 5' splice, other 5' splice: displayed 3' splice, other 3' splice:
+
+
+Times in secs (cum)
+read queries   0 (  0)
+sort queries   0 (  0)
+find matches   8 (  8)
+         end   0 (  8)

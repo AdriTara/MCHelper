@@ -1,0 +1,116 @@
+./cross_match -matrix RepeatMasker-master/Matrices/crossmatch/25p41g.matrix Dsta_complete_7070_all.fa fastalib_Repbase_JS.fasta 
+cross_match version 1.090518
+
+Run date:time  231207:152718
+Query file(s):  Dsta_complete_7070_all.fa   Log file: Dsta_complete_7070_all.fa.log
+Subject file(s):   fastalib_Repbase_JS.fasta
+Presumed sequence type (from score matrix): DNA
+
+Pairwise comparison algorithm: banded Smith-Waterman
+
+Score matrix RepeatMasker-master/Matrices/crossmatch/25p41g.matrix
+    A   R   G   C   Y   T   K   M   S   W   N   X
+A   8   1  -6 -13 -14 -15 -11  -2 -10  -3  -1 -27
+R   2   2   1 -13 -13 -14  -6  -5  -5  -5  -1 -27
+G  -2   3  10 -13 -13 -13  -1  -8  -1  -8  -1 -27
+C -13 -13 -13  10   3  -2  -8  -1  -1  -8  -1 -27
+Y -14 -13 -13   1   2   2  -5  -6  -5  -5  -1 -27
+T -15 -14 -13  -6   1   8  -2 -11 -10  -3  -1 -27
+K  -9  -5  -1  -9  -6  -2  -1  -9  -5  -5  -1 -27
+M  -2  -6  -9  -1  -5  -9  -9  -1  -5  -5  -1 -27
+S  -8  -4  -1  -1  -4  -8  -4  -4  -1  -8  -1 -27
+W  -3  -6 -10 -10  -6  -3  -6  -6 -10  -3  -1 -27
+N  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 -27
+X -27 -27 -27 -27 -27 -27 -27 -27 -27 -27 -27 -27
+
+Gap penalties: gap_init: -12, gap_ext: -2, ins_gap_ext: -2, del_gap_ext: -2, 
+Using complexity-adjusted scores. Assumed background frequencies:
+ Aa: 0.295  Rr: 0.000  Gg: 0.205  Cc: 0.205  Yy: 0.000  Tt: 0.295  Kk: 0.000  Mm: 0.000  Ss: 0.000  Ww: 0.000  Nn: 0.000  : 0.000  
+
+minmatch: 14, maxmatch: 20, max_group_size: 0 (turned off), minscore: 30, near_minscore: 30, bandwidth: 14, indexwordsize: 12, indexwordsize2: 4, word_offset: 2
+word_raw: 0
+vector_bound: 0
+gap1_minscore: 17, gap1_dropoff: -12
+masklevel: 80
+minmargin: 0.5
+splice_edge_length: 0, allocation: 1 bytes
+min_intron_length: 30, max_intron_length: 10000, max_overlap: 20, min_exon_length: 6 
+Variable sizes: int: 4, long int: 8, SEQ_AREA: 4, signed: 1
+
+
+Sequence file: Dsta_complete_7070_all.fa    1 entries
+Residue counts,  score matrix column # (* = last column):
+  a         160    1
+  c         117    4
+  g         105    3
+  t         208    6
+Total    590 residues
+
+4 distinct alphabetic chars have freq > 1% -- 
+
+Allocated space: 1183 seqs, 27 ids, 2 descrips
+
+NO QUALITY FILE Dsta_complete_7070_all.fa.qual WAS FOUND. REMAINING INPUT QUALITIES SET TO 15.
+Base_llr -5.55, intron_coeff: -0.00288828
+
+Total subject length: 132772601 residues, final minscore: 30
+
+Num. pairs: 10
+Maximal single base matches (low complexity regions):
+FBte0000407_2#CLASSII/TIR   Aa   Score:   33   Residues:    47 -    54
+FBte0000407_2#CLASSII/TIR   Aa   Score:   32   Residues:   339 -   342
+FBte0000407_2#CLASSII/TIR   Aa   Score:   32   Residues:   443 -   446
+FBte0000407_2#CLASSII/TIR   Aa   Score:   32   Residues:   484 -   487
+FBte0000407_2#CLASSII/TIR   Aa   Score:   30   Residues:   502 -   506
+FBte0000407_2#CLASSII/TIR   Gg   Score:   32   Residues:   572 -   579
+FBte0000407_2#CLASSII/TIR   Gg   Score:   30   Residues:   403 -   405
+FBte0000407_2#CLASSII/TIR   Gg   Score:   30   Residues:   477 -   479
+FBte0000407_2#CLASSII/TIR   Cc   Score:   38   Residues:   224 -   238
+FBte0000407_2#CLASSII/TIR   Cc   Score:   34   Residues:   390 -   394
+FBte0000407_2#CLASSII/TIR   Cc   Score:   32   Residues:   246 -   256
+FBte0000407_2#CLASSII/TIR   Cc   Score:   30   Residues:   379 -   381
+FBte0000407_2#CLASSII/TIR   Yy   Score:   34   Residues:   222 -   239
+FBte0000407_2#CLASSII/TIR   Tt   Score:  119   Residues:   211 -   239
+FBte0000407_2#CLASSII/TIR   Tt   Score:   48   Residues:    55 -    60
+FBte0000407_2#CLASSII/TIR   Tt   Score:   32   Residues:     7 -    10
+FBte0000407_2#CLASSII/TIR   Tt   Score:   39   Residues:   180 -   188
+FBte0000407_2#CLASSII/TIR   Tt   Score:   32   Residues:    72 -    75
+FBte0000407_2#CLASSII/TIR   Tt   Score:   51   Residues:   455 -   469
+FBte0000407_2#CLASSII/TIR   Tt   Score:   38   Residues:   383 -   388
+FBte0000407_2#CLASSII/TIR   Tt   Score:   32   Residues:   343 -   346
+FBte0000407_2#CLASSII/TIR   Tt   Score:   32   Residues:   416 -   419
+FBte0000407_2#CLASSII/TIR   Tt   Score:   30   Residues:   566 -   570
+FBte0000407_2#CLASSII/TIR   Tt   Score:   30   Residues:   580 -   584
+
+  40  6.67 0.00 20.00  FBte0000407_2#CLASSII/TIR        6    20 (570)  C ENSPM3_ZM#DNA/CMC-EnSpm   (3197) 10183 10172  
+1714 10.28 20.38 19.69  FBte0000407_2#CLASSII/TIR       10   583 (7)  C INV2j_DB#Unknown   (221)   668    91  
+  31 28.57 0.00 0.00  FBte0000407_2#CLASSII/TIR      581   587 (3)  C Sola1-3_HM#DNA/Sola-1   (3239)   240   234  
+  37  0.00 0.00 25.00  FBte0000407_2#CLASSII/TIR      583   590 (0)  C Helitron-3_ZM#RC/Helitron   (22496) 12546 12541  
+
+1 matching entries (first file).
+
+Discrepancy summary:
+Qual algn  cum    rcum    (%)    unalgn X    N  sub del ins  total (%)   cum  rcum (%)
+
+
+Score histogram: displayed unspliced matches/cum/frac, other unspliced, displayed spliced, other spliced:
+> 1000    1     1 0.250      0     0 0.000      0     0 0.000      0     0 0.000  
+   40    1     2 0.500      0     0 0.000      0     0 0.000      0     0 0.000  
+   37    1     3 0.750      0     0 0.000      0     0 0.000      0     0 0.000  
+   31    1     4 1.000      0     0 0.000      0     0 0.000      0     0 0.000  
+
+Start histogram: displayed unspliced matches/cum/frac, other unspliced, displayed spliced, other spliced:
+  582    1     1 0.250      0     0 0.000      0     0 0.000      0     0 0.000  
+  580    1     2 0.500      0     0 0.000      0     0 0.000      0     0 0.000  
+    9    1     3 0.750      0     0 0.000      0     0 0.000      0     0 0.000  
+    5    1     4 1.000      0     0 0.000      0     0 0.000      0     0 0.000  
+
+
+Splice histogram : displayed 5' splice, other 5' splice: displayed 3' splice, other 3' splice:
+
+
+Times in secs (cum)
+read queries   0 (  0)
+sort queries   0 (  0)
+find matches   4 (  4)
+         end   0 (  4)
