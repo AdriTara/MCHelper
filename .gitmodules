@@ -1,0 +1,3 @@
+[submodule "tools/Curation_toolkit"]
+	path = tools/Curation_toolkit
+	url = git@github.com:AdriTara/Curation_toolkit.git
