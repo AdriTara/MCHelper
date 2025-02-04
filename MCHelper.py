@@ -387,7 +387,8 @@ def find_profiles(te, outputdir, ref_profiles):
 
             if hasDomains:
                 result = "profiles: " + result[:-2]
-            delete_files(outputdir + "/" + seq_name + "_profiles_found.hmm_formatted")
+            # delete_files(outputdir + "/" + seq_name + "_profiles_found.hmm_formatted")
+            # shutil.move(outputdir + "/" + seq_name + "_profiles_found.hmm_formatted", outputdir + "/te_aid/" + seq_name + "_profiles_found.hmm_formatted")
         delete_files(outputdir + "/" + seq_name + "_profiles_found.hmm")
 
     delete_files(outputdir + "/" + seq_name + "_putative_te_orf.fa")
@@ -2280,7 +2281,10 @@ def run_te_aid_parallel(te_aid_path, genome, ref_tes, outputdir, cores, min_perc
 
                 shutil.rmtree(outputdir + "/te_aid_" + str(i))
         pool.close()
-
+        pattern = "*.hmm_formatted"
+        for file in glob.glob(os.path.join(outputdir, "*.hmm_formatted")):
+          shutil.move(file, outputdir + "/te_aid/")
+        # shutil.move(outputdir + "/" + seq_name + "_profiles_found.hmm_formatted", outputdir + "/te_aid/" + seq_name + "_profiles_found.hmm_formatted")
     else:
         print("TE+aid already run!")
 
