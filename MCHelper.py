@@ -996,7 +996,7 @@ def manual_inspection(genome, outputdir, te_library, seqs_to_mi, seqID_list, str
                       gff_files, min_perc_model, seqs_to_module3, keep_seqs, orders, kept_seqs_record, non_curated,
                       num_copies):
     if te_aid == 'Y':
-        run_te_aid_parallel(tools_path + "/TE-Aid-master/", genome, te_library, outputdir, cores, min_perc_model)
+        run_te_aid_parallel(tools_path + "/TE-Aid/", genome, te_library, outputdir, cores, min_perc_model)
     print("TE Aid successfully ran")
 
     seqs_manu = 0
@@ -3170,7 +3170,7 @@ if __name__ == '__main__':
         ########################################################################################################
         # Third step: run TE+Aid in parallel
         ########################################################################################################
-        run_te_aid_parallel(tools_path + "/TE-Aid-master/", genome, user_library, outputdir + "/", cores,
+        run_te_aid_parallel(tools_path + "/TE-Aid/", genome, user_library, outputdir + "/", cores,
                             min_perc_model)
         
         print("MCHelper with TE-Aid successfully run")
@@ -3355,7 +3355,7 @@ if __name__ == '__main__':
         print("Debugging....")
         """build_class_table_parallel(user_library, cores, outputdir,
                                    blastn_db, blastx_db, ref_profiles, False)"""
-        run_te_aid_parallel(tools_path + "/TE-Aid-master/", genome, user_library, outputdir + "/", cores, min_perc_model)
+        run_te_aid_parallel(tools_path + "/TE-Aid/", genome, user_library, outputdir + "/", cores, min_perc_model)
 
 
     ####################################################################################################################

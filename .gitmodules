@@ -1,3 +1,6 @@
 [submodule "tools/Curation_toolkit"]
 	path = tools/Curation_toolkit
 	url = git@github.com:AdriTara/Curation_toolkit.git
+[submodule "tools/TE-Aid"]
+	path = tools/TE-Aid
+	url = git@github.com:/AdriTara/TE-Aid
