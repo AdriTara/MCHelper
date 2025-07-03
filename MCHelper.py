@@ -1073,6 +1073,7 @@ def manual_inspection(genome, outputdir, te_library, seqs_to_mi, seqID_list, str
                     except Exception as ex:
                         print("WARNING: The plot from " + struc_table.at[i, "Seq_name"] + " has a problem:")
                         print(ex)
+                        plt.close(fig)
 
                 else:
                     # create figure
@@ -1162,6 +1163,7 @@ def manual_inspection(genome, outputdir, te_library, seqs_to_mi, seqID_list, str
                         except Exception as ex:
                             print("WARNING: The plot from " + struc_table.at[i, "Seq_name"] + " has a problem:")
                             print(ex)
+                            plt.close(fig)
 
                         delete_files(outputdir + '/te_aid/' + struc_table.at[i, "Seq_name"] + '.fa.c2g.jpeg')
                     except FileNotFoundError:
