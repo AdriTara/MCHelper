@@ -8,6 +8,8 @@ MCHelper: An automatic tool to curate transposable element libraries
   * [MacOS](#MacOS)
 * [Testing](#testing)
 * [Usage](#usage)
+* [Docker](#Docker)
+* [Recovering](#Recovering)
 * [Inputs](#inputs)
 * [Outputs](#outputs)
 * [Citation](#citation)
@@ -218,6 +220,23 @@ MCHelper is a modular pipeline (see figure below), which can be run in a integra
 <p align="center">
   <img src="https://github.com/GonzalezLab/MCHelper/blob/main/MCHelper_modules_Flow.jpg"/>
 </p>
+
+## Docker
+Docker can be used to install and execute MCHelper (thanks @AdriTara for the commit). The MCHelper's container can be built using the following:
+```
+git clone https://github.com/gonzalezlab/MCHelper.git
+cd MCHelper
+docker build -t mchelper .
+```
+Then, you can execute it simply using:
+```
+docker run -it mchelper
+```
+If you want to use a folder outside the container, please mount it as a docker volume, the command would be:
+docker run -it -v /complete/user/data/path:/container/path
+
+## Recovering
+MCHelper can be resumed if it has stopped unexpectedly. The software has different recovery points and all you have to do is run the same command that was executed in the first place. It is crucial that the output directory is the same as the one specified in the failed run. MCHelper will look at this output directory and decide at which point it should resume the analysis. The information will be displayed in the standard MCHelper output.
 
 ## Inputs
 The input files required by MCHelper will depend of the tool you used to create the TE library. **If you used REPET**, then you will need the following files:
