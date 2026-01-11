@@ -3035,7 +3035,8 @@ if __name__ == '__main__':
                     print("WARNING: Unclassified module didn't run because classified module didn't find any TE")
                 else:
                     print("WARNING: "+ref_library_module3+" is empty")
-
+                    
+        print("MCHelper finished")              
     ####################################################################################################################
     # BEE module
     ####################################################################################################################
