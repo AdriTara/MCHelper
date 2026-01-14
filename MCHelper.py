@@ -2472,7 +2472,7 @@ if __name__ == '__main__':
     # Needed by Classified module
     ####################################################################################################################
     tools_path = Installation_path + "/tools/"
-    library_path = Installation_path + "/db/allDatabases.clustered_rename.fa"
+    default_library_path = os.path.join(Installation_path, "db", "allDatabases.clustered_rename.fa")
     ref_profiles = Installation_path + "/db/Pfam35.0.hmm"
     blastn_db = Installation_path + "/db/Dfam_3.7_curatedonly.fa"
     blastx_db = Installation_path + "/db/Dfam_3.7_curatedonly_aa.fasta"
@@ -2554,6 +2554,12 @@ if __name__ == '__main__':
     parser.add_argument('-k', required=False, dest='clustering_alg',
                         help='Clustering algorithm: cd-hit or meshclust. Default=cd-hit')
     parser.add_argument('--version', action='version', version='MCHelper version 1.7.0')
+    parser.add_argument('--db_path', required=False, dest='library_path', default=default_library_path
+                        , help=("Path to the TE reference library. "
+                                "Default: installation database "
+                                "(db/allDatabases.clustered_rename.fa)"
+                                )
+                        )
 
 
     options = parser.parse_args()
@@ -2576,10 +2582,13 @@ if __name__ == '__main__':
     ext_nucl = options.ext_nucl
     clustering_alg = options.clustering_alg
     num_ite = options.num_ite
+    library_path = options.library_path
 
     ####################################################################################################################
     # Parameter validation
     ####################################################################################################################
+    if not os.path.isfile(library_path):
+        parser.error(f"Library file not found: {library_path}")
     module = 0
     if module_user is None:
         module_user = 'A'
