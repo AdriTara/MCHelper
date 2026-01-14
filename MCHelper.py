@@ -2554,7 +2554,7 @@ if __name__ == '__main__':
     parser.add_argument('-k', required=False, dest='clustering_alg',
                         help='Clustering algorithm: cd-hit or meshclust. Default=cd-hit')
     parser.add_argument('--version', action='version', version='MCHelper version 1.7.0')
-    parser.add_argument('--db_path', required=False, dest='library_path', default=default_library_path
+    parser.add_argument('--db_file', required=False, dest='library_path', default=default_library_path
                         , help=("Path to the TE reference library. "
                                 "Default: installation database "
                                 "(db/allDatabases.clustered_rename.fa)"
@@ -2703,7 +2703,8 @@ if __name__ == '__main__':
             sys.exit(0)
         else:
             print("MESSAGE: Using " + str(clustering_alg) + " as clustering algorithm")
-
+    if verbose:
+      print("MESSAGE: Using file " + library_path + " as database")
     ####################################################################################################################
     # Classified module
     ####################################################################################################################
