@@ -2588,7 +2588,8 @@ if __name__ == '__main__':
     # Parameter validation
     ####################################################################################################################
     if not os.path.isfile(library_path):
-        parser.error(f"Library file not found: {library_path}")
+        print('FATAL ERROR: Library file not found: '+str(library_path))
+        sys.exit(0)
     module = 0
     if module_user is None:
         module_user = 'A'
