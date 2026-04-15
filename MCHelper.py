@@ -996,7 +996,7 @@ def manual_inspection(genome, outputdir, te_library, seqs_to_mi, seqID_list, str
                       gff_files, min_perc_model, seqs_to_module3, keep_seqs, orders, kept_seqs_record, non_curated,
                       num_copies):
     if te_aid == 'Y':
-        run_te_aid_parallel(tools_path + "/TE-Aid/", genome, te_library, outputdir, cores, min_perc_model)
+        run_te_aid_parallel(genome, te_library, outputdir, cores, min_perc_model)
     print("TE Aid successfully ran")
 
     seqs_manu = 0
@@ -2186,7 +2186,7 @@ def module3(ref_tes, library_path, cores, outputdir, perc_ident, perc_cover, min
         print("WARNING: unclassified module couldn't find any TE !")
 
 
-def run_te_aid_parallel(te_aid_path, genome, ref_tes, outputdir, cores, min_perc_model):
+def run_te_aid_parallel(genome, ref_tes, outputdir, cores, min_perc_model):
     if not os.path.exists(outputdir + "/te_aid"):
 
         if not os.path.exists(genome + ".nhr"):
@@ -2212,7 +2212,7 @@ def run_te_aid_parallel(te_aid_path, genome, ref_tes, outputdir, cores, min_perc
         # Run in parallel the checking
         pool = multiprocessing.Pool(processes=cores)
         localresults = [pool.apply_async(run_te_aid,
-                                         args=[te_aid_path, genome, outputdir + "/te_aid_" + str(x),
+                                         args=[genome, outputdir + "/te_aid_" + str(x),
                                                tes[ini_per_thread[x]:end_per_thread[x]], min_perc_model]) for x in
                         range(cores)]
 
@@ -2289,7 +2289,7 @@ def run_te_aid_parallel(te_aid_path, genome, ref_tes, outputdir, cores, min_perc
         print("TE+aid already run!")
 
 
-def run_te_aid(te_aid_path, genome, outputdir, tes, min_perc_model):
+def run_te_aid(genome, outputdir, tes, min_perc_model):
     status = -1
     create_output_folders(outputdir)
     for sequence in tes:
@@ -2298,7 +2298,7 @@ def run_te_aid(te_aid_path, genome, outputdir, tes, min_perc_model):
 
         try:
             output = subprocess.run(
-                [te_aid_path + '/TE-Aid', '-q', outputdir + "/" + str(seq_name) + ".fa", '-g', genome, '-o', outputdir],
+                ['TE-Aid', '-q', outputdir + "/" + str(seq_name) + ".fa", '-g', genome, '-o', outputdir],
                  stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
             status = 1
@@ -3182,7 +3182,7 @@ if __name__ == '__main__':
         ########################################################################################################
         # Third step: run TE+Aid in parallel
         ########################################################################################################
-        run_te_aid_parallel(tools_path + "/TE-Aid/", genome, user_library, outputdir + "/", cores,
+        run_te_aid_parallel(genome, user_library, outputdir + "/", cores,
                             min_perc_model)
         
         print("MCHelper with TE-Aid successfully run")
@@ -3367,7 +3367,7 @@ if __name__ == '__main__':
         print("Debugging....")
         """build_class_table_parallel(user_library, cores, outputdir,
                                    blastn_db, blastx_db, ref_profiles, False)"""
-        run_te_aid_parallel(tools_path + "/TE-Aid/", genome, user_library, outputdir + "/", cores, min_perc_model)
+        run_te_aid_parallel(genome, user_library, outputdir + "/", cores, min_perc_model)
 
 
     ####################################################################################################################
