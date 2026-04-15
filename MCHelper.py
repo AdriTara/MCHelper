@@ -1963,7 +1963,7 @@ def filter_bad_candidates(new_ref_tes, perc_ssr, outputdir, tools_path, busco_li
     os.chdir(outputdir)
     try:
         output = subprocess.run(
-            [tools_path + '/trf409.linux64', new_ref_tes, '2', '3', '5', '80', '10', '20', '15', '-h', '-d'],
+            ['trf', new_ref_tes, '2', '3', '5', '80', '10', '20', '15', '-h', '-d'],
             stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     except Exception as exp:
         print("FATAL ERROR: I couldn't execute properly the TRF program. Please check the error: "+exp.args)
