@@ -1,4 +1,4 @@
-FROM dfam/tetools:latest AS builder
+FROM dfam/tetools:1.90 AS builder
 
 RUN apt update && apt upgrade -y
 
