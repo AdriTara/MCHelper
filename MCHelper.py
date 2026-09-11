@@ -147,6 +147,7 @@ def count_flf_fasta(ref_tes, genome, cores, outputdir):
         output = subprocess.run(
             ['blastn', '-query', ref_tes, '-db', genome, '-out', outputdir + "/TEs_vs_genome.blast", '-num_threads',
              str(cores), "-outfmt", "6 qseqid length", "-evalue", "10e-8"], stdout=subprocess.PIPE, text=True)
+             # blastn -query $QUERY -db $GENOME -evalue $EVALUE -outfmt 6 | sed 's/#/-/g' #blast from TE-Aid
 
         blastresult = pd.read_table(outputdir + "/TEs_vs_genome.blast", sep='\t', names=['qseqid', 'length'])
 
@@ -392,7 +393,8 @@ def find_profiles(te, outputdir, ref_profiles):
 
             if hasDomains:
                 result = "profiles: " + result[:-2]
-            delete_files(outputdir + "/" + seq_name + "_profiles_found.hmm_formatted")
+            # delete_files(outputdir + "/" + seq_name + "_profiles_found.hmm_formatted")
+            # shutil.move(outputdir + "/" + seq_name + "_profiles_found.hmm_formatted", outputdir + "/te_aid/" + seq_name + "_profiles_found.hmm_formatted")
         delete_files(outputdir + "/" + seq_name + "_profiles_found.hmm")
 
     delete_files(outputdir + "/" + seq_name + "_putative_te_orf.fa")
@@ -1007,7 +1009,8 @@ def manual_inspection(genome, outputdir, te_library, seqs_to_mi, seqID_list, str
                       gff_files, min_perc_model, seqs_to_module3, keep_seqs, orders, kept_seqs_record, non_curated,
                       num_copies):
     if te_aid == 'Y':
-        run_te_aid_parallel(tools_path + "/TE-Aid-master/", genome, te_library, outputdir, cores, min_perc_model)
+        run_te_aid_parallel(genome, te_library, outputdir, cores, min_perc_model)
+    print("TE Aid successfully ran")
 
     seqs_manu = 0
     ele_number = 0
@@ -1264,6 +1267,7 @@ def manual_inspection(genome, outputdir, te_library, seqs_to_mi, seqID_list, str
     print("-------------------------------------------")
     print("")
     return seqs_to_module3, keep_seqs, orders, kept_seqs_record, non_curated, orders_incomplete
+  
 
 
 def new_module1(plots_dir, ref_tes, gff_files, outputdir, pre, te_aid, automatic, minDomLTR, num_copies, minFLNA,
@@ -2050,7 +2054,7 @@ def filter_bad_candidates(new_ref_tes, perc_ssr, outputdir, tools_path, busco_li
     os.chdir(outputdir)
     try:
         output = subprocess.run(
-            [tools_path + '/trf409.linux64', new_ref_tes, '2', '3', '5', '80', '10', '20', '15', '-h', '-d'],
+            ['trf', new_ref_tes, '2', '3', '5', '80', '10', '20', '15', '-h', '-d'],
             stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     except Exception as exp:
         print("FATAL ERROR: I couldn't execute properly the TRF program. Please check the error: " + exp.args)
@@ -2278,7 +2282,7 @@ def module3(ref_tes, library_path, cores, outputdir, perc_ident, perc_cover, min
         print("WARNING: unclassified module couldn't find any TE !")
 
 
-def run_te_aid_parallel(te_aid_path, genome, ref_tes, outputdir, cores, min_perc_model):
+def run_te_aid_parallel(genome, ref_tes, outputdir, cores, min_perc_model):
     if not os.path.exists(outputdir + "/te_aid"):
 
         if not os.path.exists(genome + ".nhr"):
@@ -2304,7 +2308,7 @@ def run_te_aid_parallel(te_aid_path, genome, ref_tes, outputdir, cores, min_perc
         # Run in parallel the checking
         pool = multiprocessing.Pool(processes=cores)
         localresults = [pool.apply_async(run_te_aid,
-                                         args=[te_aid_path, genome, outputdir + "/te_aid_" + str(x),
+                                         args=[genome, outputdir + "/te_aid_" + str(x),
                                                tes[ini_per_thread[x]:end_per_thread[x]], min_perc_model]) for x in
                         range(cores)]
 
@@ -2349,12 +2353,15 @@ def run_te_aid_parallel(te_aid_path, genome, ref_tes, outputdir, cores, min_perc
 
                 shutil.rmtree(outputdir + "/te_aid_" + str(i))
         pool.close()
-
+        pattern = "*.hmm_formatted"
+        for file in glob.glob(os.path.join(outputdir, "*.hmm_formatted")):
+          shutil.move(file, outputdir + "/te_aid/")
+        # shutil.move(outputdir + "/" + seq_name + "_profiles_found.hmm_formatted", outputdir + "/te_aid/" + seq_name + "_profiles_found.hmm_formatted")
     else:
         print("TE+aid already run!")
 
 
-def run_te_aid(te_aid_path, genome, outputdir, tes, min_perc_model):
+def run_te_aid(genome, outputdir, tes, min_perc_model):
     status = -1
     create_output_folders(outputdir)
     for sequence in tes:
@@ -2363,8 +2370,8 @@ def run_te_aid(te_aid_path, genome, outputdir, tes, min_perc_model):
 
         try:
             output = subprocess.run(
-                [te_aid_path + '/TE-Aid', '-q', outputdir + "/" + str(seq_name) + ".fa", '-g', genome, '-o', outputdir],
-                stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+                ['TE-Aid', '-q', outputdir + "/" + str(seq_name) + ".fa", '-g', genome, '-o', outputdir],
+                 stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
             status = 1
         except:
@@ -2541,7 +2548,7 @@ if __name__ == '__main__':
     # Needed by Classified module
     ####################################################################################################################
     tools_path = Installation_path + "/tools/"
-    library_path = Installation_path + "/db/allDatabases.clustered_rename.fa"
+    default_library_path = os.path.join(Installation_path, "db", "allDatabases.clustered_rename.fa")
     ref_profiles = Installation_path + "/db/Pfam35.0.hmm"
     blastn_db = Installation_path + "/db/Dfam_3.7_curatedonly.fa"
     blastx_db = Installation_path + "/db/Dfam_3.7_curatedonly_aa.fasta"
@@ -2624,6 +2631,12 @@ if __name__ == '__main__':
     parser.add_argument('-k', required=False, dest='clustering_alg',
                         help='Clustering algorithm: cd-hit or meshclust. Default=cd-hit')
     parser.add_argument('--version', action='version', version='MCHelper version 1.7.0')
+    parser.add_argument('--db_file', required=False, dest='library_path', default=default_library_path
+                        , help=("Path to the TE reference library. "
+                                "Default: installation database "
+                                "(db/allDatabases.clustered_rename.fa)"
+                                )
+                        )
 
     options = parser.parse_args()
     module_user = options.module_user
@@ -2645,10 +2658,14 @@ if __name__ == '__main__':
     ext_nucl = options.ext_nucl
     clustering_alg = options.clustering_alg
     num_ite = options.num_ite
+    library_path = options.library_path
 
     ####################################################################################################################
     # Parameter validation
     ####################################################################################################################
+    if not os.path.isfile(library_path):
+        print('FATAL ERROR: Library file not found: '+str(library_path))
+        sys.exit(0)
     module = 0
     if module_user is None:
         module_user = 'A'
@@ -2766,7 +2783,8 @@ if __name__ == '__main__':
             sys.exit(0)
         else:
             print("MESSAGE: Using " + str(clustering_alg) + " as clustering algorithm")
-
+    if verbose:
+      print("MESSAGE: Using file " + library_path + " as database")
     ####################################################################################################################
     # Classified module
     ####################################################################################################################
@@ -3127,6 +3145,8 @@ if __name__ == '__main__':
                 else:
                     print("WARNING: " + ref_library_module3 + " is empty")
 
+                    
+        print("MCHelper finished")              
     ####################################################################################################################
     # BEE module
     ####################################################################################################################
@@ -3154,7 +3174,7 @@ if __name__ == '__main__':
                                              group_outliers, min_plurality, end_threshold, max_num_subfamilies)
 
     ####################################################################################################################
-    # TE+aid in Parallel
+    # TE+aid in Parallel (MODIFIED FOR SHINY APP)
     ####################################################################################################################
     if module == 4:
         if user_library is None:
@@ -3169,12 +3189,102 @@ if __name__ == '__main__':
         if not os.path.exists(genome):
             print("FATAL ERROR: Genome file " + genome + " doesn't exist.")
             sys.exit(0)
+        if te_aid is None:
+            te_aid = 'Y'
+            print('MESSAGE: Using by default te_aid = Y')
+        elif te_aid.upper() not in ['Y', 'N']:
+            print('FATAL ERROR: unknown value of --te_aid parameter: ' + te_aid + '. This parameter must be Y or N')
+            sys.exit(0)
+        else:
+            te_aid = te_aid.upper()
+        if input_type == None:
+            print(
+                'FATAL ERROR: You need to specify the input type parameter (--input_type). Values can be fasta or repet')
+            sys.exit(0)
+        elif input_type.upper() not in ['FASTA', 'REPET']:
+            print(
+                'FATAL ERROR: Unknown value ('+input_type+') in the input type parameter (--input_type). Values must be fasta or repet')
+            sys.exit(0)
+        else:
+            input_type = input_type.lower()
 
         ########################################################################################################
-        # First step: run TE+Aid in parallel
+        # Checking that input is fine
         ########################################################################################################
-        run_te_aid_parallel(tools_path + "/TE-Aid-master/", genome, user_library, outputdir + "/", cores,
+        use_repet = True
+        if input_type == 'repet':
+            if input_dir is None:
+                print('FATAL ERROR: -i parameter must be specified in for the classified module and input type REPET')
+                sys.exit(0)
+            if proj_name is None:
+                print('FATAL ERROR: -n parameter must be specified in for the classified module and input type REPET')
+                sys.exit(0)
+
+            start_time = time.time()
+            input_valid, reason_valid = check_repet_input_folder(input_dir, proj_name)
+            end_time = time.time()
+            if verbose:
+                print("MESSAGE: REPET Input checking done: [" + str(end_time - start_time) + " seconds]")
+
+            if input_valid:
+                ref_tes = input_dir + "/" + proj_name + "_refTEs.fa"
+                features_table = input_dir + "/" + proj_name + "_denovoLibTEs_PC.classif"
+                plots_dir = input_dir + "/plotCoverage"
+                gff_files = input_dir + "/gff_reversed"
+            else:
+                print(reason_valid)
+                sys.exit(0)
+        elif input_type == 'fasta':
+            use_repet = False
+            if user_library is None:
+                print('FATAL ERROR: -l parameter must be specified in for the classified module using input type fasta')
+                sys.exit(0)
+            if not os.path.exists(user_library):
+                print("FATAL ERROR: TE library file " + user_library + " doesn't exist.")
+                sys.exit(0)
+
+            start_time = time.time()
+            if check_classification_Userlibrary(user_library, outputdir) == 0:
+                if not os.path.exists(outputdir + "/classifiedModule/denovoLibTEs_PC.classif") and not os.path.exists(
+                        outputdir + "/classifiedModule/new_user_lib.fa"):
+                    if automatic == 'M':
+                        do_blast = True
+                    else:
+                        do_blast = False
+                features_table = outputdir + "/classifiedModule/denovoLibTEs_PC.classif"
+
+            else:
+                print(
+                    'WARNING: There are some sequences with problems in your library and MCHelper cannot process them. Please check them in the file: ' + outputdir + '/sequences_with_problems.txt')
+
+            gff_files = ""
+            plots_dir = ""
+            user_library = outputdir + "/candidate_tes.fa"
+            end_time = time.time()
+            if verbose:
+                print("MESSAGE: Fasta pre-processing done: [" + str(end_time - start_time) + " seconds]")
+
+        ########################################################################################################
+        # First step: Build necessary files
+        ########################################################################################################
+        seqID_list = [str(x.id).split("#")[0] for x in SeqIO.parse(user_library, "fasta")]
+        build_class_table_parallel(user_library, cores, outputdir,
+                                   blastn_db, blastx_db, ref_profiles, False)
+        struc_table = pd.read_csv(outputdir + "/denovoLibTEs_PC.classif", sep='\t')
+
+        ########################################################################################################
+        # Second step: Filter elements with not enough FLF copies in the genome
+        ########################################################################################################
+        flf_file = count_flf_fasta(user_library, genome, cores, outputdir)
+        user_library_2, num_copies = filter_flf(user_library, flf_file, 0, outputdir)
+
+        ########################################################################################################
+        # Third step: run TE+Aid in parallel
+        ########################################################################################################
+        run_te_aid_parallel(genome, user_library, outputdir + "/", cores,
                             min_perc_model)
+        
+        print("MCHelper with TE-Aid successfully run")
 
     ####################################################################################################################
     # Manual Inspection module
@@ -3305,63 +3415,63 @@ if __name__ == '__main__':
         ########################################################################################################
         # Third step: Save results
         ########################################################################################################
-        for index in range(len(kept_seqs_record)):
-            # put the order having the superfamily
-            classification = dicc_orders[orders[index]]
-            if orders[index] >= 3 and orders[index] <= 8:
-                classification = "LTR/" + classification
-            elif orders[index] >= 11 and orders[index] <= 19:
-                classification = "LINE/" + classification
-            elif orders[index] >= 21 and orders[index] <= 23:
-                classification = "DIRS/" + classification
-            elif orders[index] >= 26 and orders[index] <= 36:
-                classification = "TIR/" + classification
-            elif orders[index] == 40:
-                classification = "UNCLASSIFIED"
+        # for index in range(len(kept_seqs_record)):
+        #     # put the order having the superfamily
+        #     classification = dicc_orders[orders[index]]
+        #     if orders[index] >= 3 and orders[index] <= 8:
+        #         classification = "LTR/" + classification
+        #     elif orders[index] >= 11 and orders[index] <= 19:
+        #         classification = "LINE/" + classification
+        #     elif orders[index] >= 21 and orders[index] <= 23:
+        #         classification = "DIRS/" + classification
+        #     elif orders[index] >= 26 and orders[index] <= 36:
+        #         classification = "TIR/" + classification
+        #     elif orders[index] == 40:
+        #         classification = "UNCLASSIFIED"
 
             # put the class having the order/superfamily
-            if orders[index] >= 2 and orders[index] <= 23:
-                classification = "CLASSI/" + classification
-            elif orders[index] >= 24 and orders[index] <= 39:
-                classification = "CLASSII/" + classification
+            # if orders[index] >= 2 and orders[index] <= 23:
+            #     classification = "CLASSI/" + classification
+            # elif orders[index] >= 24 and orders[index] <= 39:
+            #     classification = "CLASSII/" + classification
+            # 
+            # new_name = keep_seqs[index] + "#" + classification
+            # kept_seqs_record[index].id = new_name
+            # kept_seqs_record[index].description = ""
 
-            new_name = keep_seqs[index] + "#" + classification
-            kept_seqs_record[index].id = new_name
-            kept_seqs_record[index].description = ""
+        # for index in range(len(non_curated)):
+        #     # put the order having the superfamily
+        #     classification = dicc_orders[orders_incomplete[index]]
+        #     if orders_incomplete[index] >= 3 and orders_incomplete[index] <= 8:
+        #         classification = "LTR/" + classification
+        #     elif orders_incomplete[index] >= 11 and orders_incomplete[index] <= 19:
+        #         classification = "LINE/" + classification
+        #     elif orders_incomplete[index] >= 21 and orders_incomplete[index] <= 23:
+        #         classification = "DIRS/" + classification
+        #     elif orders_incomplete[index] >= 26 and orders_incomplete[index] <= 36:
+        #         classification = "TIR/" + classification
+        #     elif orders_incomplete[index] == 40:
+        #         classification = "UNCLASSIFIED"
 
-        for index in range(len(non_curated)):
-            # put the order having the superfamily
-            classification = dicc_orders[orders_incomplete[index]]
-            if orders_incomplete[index] >= 3 and orders_incomplete[index] <= 8:
-                classification = "LTR/" + classification
-            elif orders_incomplete[index] >= 11 and orders_incomplete[index] <= 19:
-                classification = "LINE/" + classification
-            elif orders_incomplete[index] >= 21 and orders_incomplete[index] <= 23:
-                classification = "DIRS/" + classification
-            elif orders_incomplete[index] >= 26 and orders_incomplete[index] <= 36:
-                classification = "TIR/" + classification
-            elif orders_incomplete[index] == 40:
-                classification = "UNCLASSIFIED"
+            # # put the class having the order/superfamily
+            # if orders_incomplete[index] >= 2 and orders_incomplete[index] <= 23:
+            #     classification = "CLASSI/" + classification
+            # elif orders_incomplete[index] >= 24 and orders_incomplete[index] <= 39:
+            #     classification = "CLASSII/" + classification
+            # 
+            # new_name = str(non_curated[index].id).split("#")[0] + "#" + classification
+            # non_curated[index].id = new_name
+            # non_curated[index].description = ""
 
-            # put the class having the order/superfamily
-            if orders_incomplete[index] >= 2 and orders_incomplete[index] <= 23:
-                classification = "CLASSI/" + classification
-            elif orders_incomplete[index] >= 24 and orders_incomplete[index] <= 39:
-                classification = "CLASSII/" + classification
-
-            new_name = str(non_curated[index].id).split("#")[0] + "#" + classification
-            non_curated[index].id = new_name
-            non_curated[index].description = ""
-
-        seqs_to_module3_record = [te for te in SeqIO.parse(user_library, "fasta") if
-                                  str(te.id).split("#")[0] in seqs_to_module3]
-        write_sequences_file(kept_seqs_record, outputdir + "/kept_seqs_curated.fa")
-        write_sequences_file(seqs_to_module3_record,
-                             outputdir + "/unclassified_seqs.fa")
-
-        delete_files(outputdir + "/extended_cons.fa")
-        delete_files(outputdir + "/putative_TEs.fa")
-        delete_files(outputdir + "/new_user_lib.fa")
+        # seqs_to_module3_record = [te for te in SeqIO.parse(user_library, "fasta") if
+        #                           str(te.id).split("#")[0] in seqs_to_module3]
+        # write_sequences_file(kept_seqs_record, outputdir + "/kept_seqs_curated.fa")
+        # write_sequences_file(seqs_to_module3_record,
+        #                      outputdir + "/unclassified_seqs.fa")
+        # 
+        # delete_files(outputdir + "/extended_cons.fa")
+        # delete_files(outputdir + "/putative_TEs.fa")
+        # delete_files(outputdir + "/new_user_lib.fa")
 
     ####################################################################################################################
     # Debugging only !!!!
@@ -3370,8 +3480,8 @@ if __name__ == '__main__':
         print("Debugging....")
         """build_class_table_parallel(user_library, cores, outputdir,
                                    blastn_db, blastx_db, ref_profiles, False)"""
-        run_te_aid_parallel(tools_path + "/TE-Aid-master/", genome, user_library, outputdir + "/", cores,
-                            min_perc_model)
+        run_te_aid_parallel(genome, user_library, outputdir + "/", cores, min_perc_model)
+
 
     ####################################################################################################################
     # Writing the final results
