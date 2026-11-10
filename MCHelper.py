@@ -2,13 +2,7 @@
 
 Manual Curation Helper Version 1.7.0
 Novelties:
-  * Added MeShClust as an alternative clustering algorithm (-k parameter)
-  * Changed cd-hit output to keep the entire sequence IDs
-  * Removed the Pandas' Future Warnings
-  * Check sequence IDs in the genome to not containing only numbers
-  * Removed TE sequences with lengths < 100 pb
-  * Added WebAgg GUI backend to work with WSL version 1 (Experimental)
-  * TE+Aid plots are now kept in PDF due to CentOS incompatibilities
+  * Ignore version 1.7.1 as it removes TE+Aid files needed by TEamo
 
 """
 
